@@ -76,9 +76,8 @@ shap.force_plot(explainer.expected_value[1], shap_values[1], data_for_prediction
 # Here is an example using KernelExplainer to get similar results. The results
 # aren't identical because KernelExplainer gives an approximate result. But the results tell the same story.
 
-# k_explainer = shap.KernelExplainer(my_model.predict_proba, train_X)
-# k_shap_values = k_explainer.shap_values(data_for_prediction)
-# shap.force_plot(k_explainer.expected_value[1], k_shap_values[1], data_for_prediction)
+k_explainer = shap.KernelExplainer(my_model.predict_proba, train_X)
+k_shap_values = k_explainer.shap_values(data_for_prediction)
+shap.force_plot(k_explainer.expected_value[1], k_shap_values[1], data_for_prediction)
 # plt.savefig('summary_plot_result.jpg')
 
-shap.dependence_plot('Goal Scored', shap_values[1], data_for_prediction)
