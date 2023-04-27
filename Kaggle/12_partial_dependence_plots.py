@@ -82,5 +82,3 @@ f_names = [('Goal Scored', 'Distance Covered (Kms)')]
 # Similar to previous PDP plot except we use tuple of features instead of single feature
 disp4 = PartialDependenceDisplay.from_estimator(rf_model, val_X, f_names, ax=ax)
 plt.show()
-
-# # # # #  3-features Partial Dependence Plots  # # # # #
