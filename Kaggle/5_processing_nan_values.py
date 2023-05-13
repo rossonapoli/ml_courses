@@ -19,7 +19,7 @@ pd.set_option('display.max_rows', 100)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 2000)
 
-melbourne_file_path = './melb_data.csv'
+melbourne_file_path = 'datasets/melb_data.csv'
 
 melbourne_data = pd.read_csv(melbourne_file_path)
 
@@ -68,6 +68,8 @@ imputed_X_valid.columns = X_valid.columns
 
 print("MAE from Approach 2 (Imputation):")
 print(score_dataset(imputed_X_train, imputed_X_valid, y_train, y_valid))
+
+#### Approach 3 (Imputation with extension) ####
 
 # Make copy to avoid changing original data (when imputing)
 X_train_plus = X_train.copy()

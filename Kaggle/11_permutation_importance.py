@@ -31,7 +31,7 @@ pd.set_option('display.width', 2000)
 
 # Теория здесь https://www.kaggle.com/code/dansbecker/permutation-importance/tutorial
 
-data = pd.read_csv('./fifa_2018.csv')
+data = pd.read_csv('datasets/fifa_2018.csv')
 y = (data['Man of the Match'] == "Yes")  # Convert from string "Yes"/"No" to binary
 feature_names = [i for i in data.columns if data[i].dtype in [np.int64]]
 X = data[feature_names]
@@ -49,3 +49,4 @@ perm = PermutationImportance(my_model, random_state=1).fit(val_X, val_y)
 w = eli5.show_weights(perm, feature_names = val_X.columns.tolist())
 result = pd.read_html(w.data)[0]
 print(result)
+

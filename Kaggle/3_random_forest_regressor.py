@@ -19,7 +19,7 @@ melbourne_data = pd.read_csv(melbourne_file_path)
 
 melbourne_data.dropna(axis = 'index')
 
-y = melbourne_data.Price
+y = melbourne_data.Pricew
 
 melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
 x = melbourne_data[melbourne_features]

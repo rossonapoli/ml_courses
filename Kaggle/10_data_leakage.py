@@ -25,7 +25,7 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 2000)
 
 # Read the data
-data = pd.read_csv('./AER_credit_card_data.csv',
+data = pd.read_csv('datasets/AER_credit_card_data.csv',
                    true_values = ['yes'], false_values = ['no'])
 
 # Select target

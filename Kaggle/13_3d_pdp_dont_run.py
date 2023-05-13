@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 
-data = pd.read_csv('./fifa_2018.csv')
+data = pd.read_csv('datasets/fifa_2018.csv')
 y = (data['Man of the Match'] == "Yes")  # Convert from string "Yes"/"No" to binary
 feature_names = [i for i in data.columns if data[i].dtype in [np.int64]]
 X = data[feature_names]

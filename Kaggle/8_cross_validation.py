@@ -22,7 +22,7 @@ pd.set_option('display.width', 2000)
 
 
 # Read the data
-data = pd.read_csv('./melb_data.csv')
+data = pd.read_csv('datasets/melb_data.csv')
 
 # Select subset of predictors
 cols_to_use = ['Rooms', 'Distance', 'Landsize', 'BuildingArea', 'YearBuilt']
